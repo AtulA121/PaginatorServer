@@ -28,5 +28,10 @@ public class EmployeeSevice {
 	{
 		return empResp.count();
 	}
+
+	public List<Employees> getEmployeeData() {
+		// TODO Auto-generated method stub
+		return empResp.findAll();
+	}
 	
 }

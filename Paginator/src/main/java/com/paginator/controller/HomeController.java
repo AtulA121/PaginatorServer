@@ -1,5 +1,7 @@
 package com.paginator.controller;
 
+import java.util.ArrayList;
+
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -10,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.paginator.mediators.PagesLength;
+import com.paginator.models.Employees;
 import com.paginator.repository.EmployeeRepository;
 import com.paginator.services.EmployeeSevice;
 
@@ -35,7 +38,8 @@ public class HomeController {
 	{
 		System.out.println("/getEmployeeData request...");
 //		return ResponseEntity.ok(empService.getEmployeeData("atul pisal"));
-		return null;
+		return ResponseEntity.ok(empService.getEmployeeData());
+//		return ResponseEntity.ok(new ArrayList<Employees>());
 	}
 	
 	@PostMapping("/postEmployeeData")
